@@ -3,7 +3,10 @@
 {
   imports = with custom-modules.nixos.software; [ steam ];
 
-  boot.kernelModules = [ "hid_steam" ];
+  boot = {
+    kernelModules = [ "hid_steam" ];
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
 
   services.udev = {
     enable = true;
