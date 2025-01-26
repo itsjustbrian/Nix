@@ -10,6 +10,7 @@ let
           custom-modules.nixos.hosts."${hostName}".default
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
+          inputs.impermanence.nixosModules.impermanence
           inputs.sops-nix.nixosModules.sops
           {
             home-manager = {
@@ -36,7 +37,7 @@ let
               };
             };
 
-            sops.age.keyFile = "/var/lib/sops-nix/key.txt";
+            sops.age.keyFile = "/nix/sops-nix.key";
             sops.defaultSopsFile = ./secrets/secrets.yaml;
             sops.defaultSopsFormat = "yaml";
             system.stateVersion = "24.05"; # DO NOT CHANGE. https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion

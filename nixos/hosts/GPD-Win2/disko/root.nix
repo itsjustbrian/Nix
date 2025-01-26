@@ -49,6 +49,11 @@ in
                   mountOptions = btrfOptions ++ ssdOptions;
                 };
 
+                "/persist" = {
+                  mountpoint = "/persist";
+                  mountOptions = btrfOptions ++ ssdOptions;
+                };
+
                 "/root" = {
                   mountpoint = "/";
                   mountOptions = btrfOptions ++ ssdOptions;

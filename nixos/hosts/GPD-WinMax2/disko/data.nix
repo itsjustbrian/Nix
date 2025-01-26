@@ -31,6 +31,11 @@ in
                 };
 
                 "/home/.snapshots" = { };
+
+                "/persist" = {
+                  mountpoint = "/persist";
+                  mountOptions = btrfOptions ++ ssdOptions;
+                };
               };
             };
           };

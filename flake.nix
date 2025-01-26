@@ -7,6 +7,8 @@
       url = "github:nix-community/disko/latest";
     };
 
+    impermanence.url = "github:nix-community/impermanence";
+
     firefox-gnome-theme = {
       flake = false;
       url = "github:rafaelmardojai/firefox-gnome-theme/v134";
