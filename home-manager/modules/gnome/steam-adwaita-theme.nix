@@ -21,7 +21,7 @@
       Service.ExecStart = pkgs.writeShellScript "adwaita-for-steam-css-patcher" ''
         cd ~/.local/share/Steam/steamui/css/
 
-        if ! test -f "library.css"; then
+        if ! ${pkgs.coreutils}/bin/test -f "library.css"; then
           echo "Steam library.css not found, make sure that you have succesfully executed Steam once!"
           exit 1;
         fi
@@ -52,7 +52,7 @@
       Service.ExecStart = pkgs.writeShellScript "adwaita-for-steam-uninstaller" ''
         cd ~/.local/share/Steam/steamui/css/
 
-        if ! test -f "library.original.css"; then
+        if ! ${pkgs.coreutils}/bin/test -f "library.original.css"; then
           echo "Original library.css not found, nothing to undo."
           exit 1
         fi
