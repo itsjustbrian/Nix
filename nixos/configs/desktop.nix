@@ -18,6 +18,7 @@
 
   networking = {
     firewall.enable = true;
+    
     networkmanager = {
       enable = true;
       wifi.macAddress = "random";
@@ -30,8 +31,6 @@
   };
 
   services = {
-    localtimed.enable = true;
-
     avahi = {
       enable = true;
       nssmdns4 = true;
