@@ -56,7 +56,6 @@
       ];
     };
 
-    "org/gnome/shell/weather".automatic-location = true;
     "org/gnome/system/location".enabled = true;
     "org/gtk/settings/file-chooser".clock-format = "12h";
   };
