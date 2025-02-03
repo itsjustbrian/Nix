@@ -8,12 +8,15 @@
 
     services.flatpak.enable = true;
 
-    systemd.services."flathub-add-repo" = {
-      wantedBy = [ "multi-user.target" ];
+    systemd.services."flathub-remote-add" = {
+      after = [ "network-online.target" ];
+      description = "Add flathub remote";
       path = [ pkgs.flatpak ];
+      requires = [ "network-online.target" ];
       script = ''
-        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+        ${pkgs.flatpak}/bin/flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
       '';
+      wantedBy = [ "multi-user.target" ];
     };
   };
 }
