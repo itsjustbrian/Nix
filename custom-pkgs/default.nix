@@ -21,6 +21,7 @@ import nixpkgs {
   overlays = [
     customPkgs
     inputs.nix-vscode-extensions.overlays.default
+    inputs.nur.overlays.default
     unstableOverlay
   ];
 }

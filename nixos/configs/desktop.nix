@@ -9,6 +9,7 @@
     gnome
     localsend
     pipewire
+    pipewire-virtual-surround
     plymouth
     systemd-boot
     systemd-wait-online
