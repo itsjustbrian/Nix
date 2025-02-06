@@ -13,7 +13,6 @@
       gnome-maps
       gnome-music
       gnome-tour
-      simple-scan
       totem
       yelp
     ];
