@@ -12,6 +12,7 @@ let
     proton-ge-bin = final.unstable.proton-ge-bin;
     sidequest = final.unstable.sidequest;
     unstable = import inputs.nixpkgs-unstable { inherit (final) config system; };
+    vscode = final.unstable.vscode;
     youtube-music = final.unstable.youtube-music;
   };
 in
