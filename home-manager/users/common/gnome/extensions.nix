@@ -7,6 +7,7 @@
     bottom-overview
     caffeine
     #compiz-windows-effect # Conflicts with outline theme
+    hibernate-status-button
     maximize-to-empty-workspace
     gnome-rounded-corners
     grand-theft-focus
