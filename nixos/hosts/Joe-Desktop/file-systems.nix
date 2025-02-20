@@ -2,8 +2,7 @@
 
 {
   imports = with custom-modules.nixos; [
-    ./disko/data.nix
-    ./disko/root.nix
+    ./disko.nix
     configs.impermanence
     configs.luks
     configs.snapper
