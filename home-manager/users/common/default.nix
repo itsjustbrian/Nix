@@ -16,7 +16,5 @@
   };
 
   programs.home-manager.enable = true; # Let Home Manager install and manage itself.
-
-  services.syncthing.enable = true;
 }
 
