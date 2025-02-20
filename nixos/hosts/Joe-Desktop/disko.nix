@@ -4,7 +4,7 @@ let
 in
 {
   disko.devices.disk.root = {
-    device = "/dev/disk/by-id/nvme-Samsung_SSD_980_500GB_S64ENU0W613103Y";
+    device = "/dev/disk/by-id/nvme-Samsung_SSD_980_PRO_2TB_S6B0NU0W961732M";
     type = "disk";
 
     content = {
@@ -37,6 +37,18 @@ in
               extraArgs = [ "-f" ];
 
               subvolumes = {
+                "/home" = {
+                  mountpoint = "/home";
+                  mountOptions = btrfOptions ++ ssdOptions;
+                };
+
+                "/home/.snapshots" = { };
+
+                "/persist" = {
+                  mountpoint = "/persist";
+                  mountOptions = btrfOptions ++ ssdOptions;
+                };
+
                 "/root" = {
                   mountpoint = "/";
                   mountOptions = btrfOptions ++ ssdOptions;

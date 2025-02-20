@@ -7,15 +7,15 @@
       <primary>yes</primary>
       <monitor>
         <monitorspec>
-          <connector>DP-3</connector>
-          <vendor>DEL</vendor>
-          <product>AW3423DWF</product>
-          <serial>20K32S3</serial>
+          <connector>DP-1</connector>
+          <vendor>GSM</vendor>
+          <product>34GL750</product>
+          <serial>0x000248ec</serial>
         </monitorspec>
         <mode>
-          <width>3440</width>
-          <height>1440</height>
-          <rate>164.900</rate>
+          <width>2560</width>
+          <height>1080</height>
+          <rate>144.001</rate>
           <ratemode>variable</ratemode>
         </mode>
       </monitor>
