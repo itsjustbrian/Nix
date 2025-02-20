@@ -42,6 +42,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur-joseph-digiovanni = {
+      url = "github:Joseph-DiGiovanni/nur-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     sops-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:Mic92/sops-nix";

@@ -9,7 +9,7 @@
     plymouth = {
       enable = true;
       theme = "neat";
-      themePackages = with pkgs; [ plymouth-theme-neat ];
+      themePackages = with pkgs; [ nur-joseph-digiovanni.plymouth-theme-neat ];
     };
   };
 }

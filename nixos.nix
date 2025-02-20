@@ -48,7 +48,7 @@ let
 
         specialArgs = {
           inherit custom-modules inputs;
-          pkgs = import ./custom-pkgs { inherit inputs nixpkgs system; };
+          pkgs = import ./custom-pkgs.nix { inherit inputs nixpkgs system; };
         };
       } // extraConfig
   );

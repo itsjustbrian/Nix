@@ -342,6 +342,26 @@
         "type": "github"
       }
     },
+    "nur-joseph-digiovanni": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1740007918,
+        "narHash": "sha256-Xi12d4nY8Brfyw1rfKsTlOhobeyZKsi/gSJhy4m0OdY=",
+        "owner": "Joseph-DiGiovanni",
+        "repo": "nur-packages",
+        "rev": "357dbec3c175fc43e1149c5a0422699c331a8072",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Joseph-DiGiovanni",
+        "repo": "nur-packages",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks-nix": {
       "inputs": {
         "flake-compat": [
@@ -381,6 +401,7 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nur": "nur",
+        "nur-joseph-digiovanni": "nur-joseph-digiovanni",
         "sops-nix": "sops-nix"
       }
     },

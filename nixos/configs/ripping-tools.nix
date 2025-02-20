@@ -7,7 +7,7 @@
 
   environment.systemPackages = with pkgs; [
     makemkv
-    mkvextract-gtk
+    nur-joseph-digiovanni.mkvextract-gtk
     mkvtoolnix
     subtitleedit
   ];

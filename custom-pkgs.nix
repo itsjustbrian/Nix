@@ -1,11 +1,6 @@
 { inputs, nixpkgs, system, ... }:
 
 let
-  customPkgs = final: prev: with nixpkgs.legacyPackages.${system}; {
-    adwaita-for-steam = callPackage ./adwaita-for-steam.nix { };
-    mkvextract-gtk = callPackage ./mkvextract-gtk.nix { };
-    plymouth-theme-neat = callPackage ./plymouth-theme-neat.nix { };
-  };
 
   unstableOverlay = final: prev: {
     alvr = final.unstable.alvr;
@@ -33,9 +28,9 @@ import nixpkgs {
   config.allowUnfree = true;
 
   overlays = [
-    customPkgs
     inputs.nix-vscode-extensions.overlays.default
     inputs.nur.overlays.default
+    inputs.nur-joseph-digiovanni.overlays.default
     unstableOverlay
     waylandOverlay
   ];

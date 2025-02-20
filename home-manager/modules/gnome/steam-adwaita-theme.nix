@@ -2,7 +2,7 @@
 
 {
   home.file.".local/share/Steam" = {
-    source = pkgs.adwaita-for-steam.override {
+    source = pkgs.nur-joseph-digiovanni.adwaita-for-steam.override {
       extraOptions = [
         "library/hide_whats_new"
       ];
