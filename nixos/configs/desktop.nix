@@ -8,6 +8,7 @@
     geoclue2
     gnome
     localsend
+    nix-index
     pipewire
     pipewire-virtual-surround
     plymouth

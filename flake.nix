@@ -29,6 +29,11 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
     };
 
+    nix-index-database = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nix-index-database";
+    };
+
     nix-vscode-extensions = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nix-vscode-extensions";
