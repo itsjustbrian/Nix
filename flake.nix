@@ -1,5 +1,5 @@
 {
-  description = "Joey's NixOS configuration";
+  description = "Brian's NixOS configuration";
 
   inputs = {
     disko = {

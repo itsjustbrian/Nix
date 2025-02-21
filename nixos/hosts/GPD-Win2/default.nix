@@ -8,13 +8,13 @@
     configs.gaming
     configs.secureboot # Must be commented on first install
     hardware.gpd-win-2
-    users.jdigi
+    users.bferch
   ];
 
   boot.plymouth.theme = lib.mkForce "bgrt"; # Screen is too small for larger themes
 
   services = {
-    displayManager.autoLogin.user = "jdigi";
+    displayManager.autoLogin.user = "bferch";
     logind.lidSwitchExternalPower = "ignore";
   };
 }

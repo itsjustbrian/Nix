@@ -1,8 +1,8 @@
 { config, custom-modules, inputs, ... }:
 
 let
-  username = "jdigi";
-  fullname = "Joseph DiGiovanni";
+  username = "bferch";
+  fullname = "Brian Ferch";
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
