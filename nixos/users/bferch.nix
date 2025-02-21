@@ -1,8 +1,8 @@
 { config, custom-modules, ... }:
 
 let
-  username = "jdigi";
-  fullname = "Joseph DiGiovanni";
+  username = "bferch";
+  fullname = "Brian Ferch";
 in
 {
   sops.secrets."users/${username}".neededForUsers = true;
