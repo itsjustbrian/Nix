@@ -11,11 +11,11 @@
     configs.gaming
     configs.secureboot # Must be commented on first install
     hardware.gpd-win-max-2
-    users.jdigi
+    users.bferch
   ];
 
   services = {
-    displayManager.autoLogin.user = "jdigi";
+    displayManager.autoLogin.user = "bferch";
     logind.lidSwitchExternalPower = "ignore";
   };
 }

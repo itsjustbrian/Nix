@@ -14,11 +14,11 @@
     configs.vr
     hardware.amd-graphics
     hardware.msi-mpg-b650i-edge-wifi
-    users.jdigi
+    users.bferch
   ];
 
   services = {
-    displayManager.autoLogin.user = "jdigi";
+    displayManager.autoLogin.user = "bferch";
     fprintd.enable = true;
   };
 }
