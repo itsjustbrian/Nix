@@ -1,8 +1,6 @@
-{ inputs, lib, ... }:
+{ lib, ... }:
 
 {
-  imports = [ inputs.lanzaboote.nixosModules.lanzaboote ];
-
   boot = {
     lanzaboote = {
       enable = true;

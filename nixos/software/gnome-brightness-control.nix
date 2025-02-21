@@ -1,4 +1,4 @@
-{ config, inputs, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 let
   UUID = "monitor-brightness-volume@ailin.nemui";
@@ -6,8 +6,6 @@ let
   darkModeBrightness = 50;
 in
 {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
-
   config = lib.mkIf config.services.xserver.displayManager.gdm.enable {
     home-manager.sharedModules = [
       {

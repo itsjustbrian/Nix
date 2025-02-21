@@ -11,6 +11,8 @@ let
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.impermanence.nixosModules.impermanence
+          inputs.lanzaboote.nixosModules.lanzaboote
+          inputs.nix-index-database.nixosModules.nix-index
           inputs.sops-nix.nixosModules.sops
           {
             home-manager = {

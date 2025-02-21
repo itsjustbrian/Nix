@@ -1,12 +1,10 @@
-{ config, custom-modules, inputs, ... }:
+{ config, custom-modules, ... }:
 
 let
   username = "jdigi";
   fullname = "Joseph DiGiovanni";
 in
 {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
-
   sops.secrets."users/${username}".neededForUsers = true;
 
   home-manager.users.${username} = custom-modules.home.users.${username}.default;
