@@ -13,6 +13,7 @@
     github-desktop
     handbrake
     localsend
+    mission-center
     obs-studio
     onlyoffice-bin
     openmw
