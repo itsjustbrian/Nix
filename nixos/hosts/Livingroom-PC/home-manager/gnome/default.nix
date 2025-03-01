@@ -15,7 +15,7 @@
 
     "org/gnome/shell" = {
       favorite-apps = lib.mkForce [
-        "firefox.desktop"
+        "librewolf.desktop"
         "youtube-music.desktop"
         "steam.desktop"
         "discord.desktop"

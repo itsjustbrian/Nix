@@ -3,14 +3,13 @@
 {
   home.file."firefox-gnome-theme" = {
     source = inputs.firefox-gnome-theme;
-    target = ".mozilla/firefox/${config.home.username}/chrome/firefox-gnome-theme";
+    target = ".librewolf/${config.home.username}/chrome/firefox-gnome-theme";
   };
 
-  programs.firefox = {
-    enable = true;
-
+  programs.librewolf = {
     profiles.${config.home.username} = {
       settings = {
+        "browser.toolbars.bookmarks.visibility" = "never";
         "browser.tabs.drawInTitlebar" = true;
         "browser.theme.dark-private-windows" = false;
         "browser.uidensity" = 0;

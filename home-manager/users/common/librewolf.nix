@@ -4,17 +4,11 @@ let
   generateLatestSourceURL = name: "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
 in
 {
-  programs.firefox = {
+  programs.librewolf = {
     enable = true;
 
     policies = {
-      DisableAccounts = true;
-      DisableFirefoxAccounts = true;
-      DisableFirefoxScreenshots = true;
-      DisableFirefoxStudies = true;
-      DisablePocket = true;
       DisableTelemetry = true;
-      DisplayBookmarksToolbar = "never";
 
       EnableTrackingProtection = {
         Cryptomining = true;
@@ -32,16 +26,6 @@ in
       Homepage.StartPage = "previous-session";
       NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
-      OverrideFirstRunPage = "";
-      OverridePostUpdatePage = "";
-
-      Preferences = {
-        "browser.newtabpage.activity-stream.showSponsored" = false;
-        "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
-        "browser.newtabpage.activity-stream.system.showSponsored" = false;
-        "browser.newtabpage.pinned" = "";
-        "browser.topsites.contile.enabled" = false;
-      };
     };
 
     profiles.${config.home.username} = {
@@ -91,6 +75,11 @@ in
 
         force = true; # Required to prevent search engine symlink being overwritten. See https://github.com/nix-community/home-manager/issues/3698
       };
+    };
+
+    settings = {
+      "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
+      "privacy.resistFingerprinting" = false;
     };
   };
 }

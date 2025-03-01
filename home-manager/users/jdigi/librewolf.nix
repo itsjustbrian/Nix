@@ -2,7 +2,7 @@ let
   latestSourceURL = name: "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
 in
 {
-  programs.firefox.policies.ExtensionSettings = {
+  programs.librewolf.policies.ExtensionSettings = {
     "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
       default_area = "navbar";
       install_url = latestSourceURL "bitwarden-password-manager";

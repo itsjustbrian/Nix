@@ -5,7 +5,7 @@
     ./extensions.nix
     ./gnome-console.nix
     ./outline-theme.nix
-    firefox-gnome-theme
+    librewolf-gnome-theme
     steam-adwaita-theme
   ];
 
@@ -50,7 +50,7 @@
     "org/gnome/shell" = {
       disable-user-extensions = false;
       favorite-apps = [
-        "firefox.desktop"
+        "librewolf.desktop"
         "org.gnome.Nautilus.desktop"
         "org.gnome.Console.desktop"
       ];

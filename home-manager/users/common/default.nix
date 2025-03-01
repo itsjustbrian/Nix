@@ -1,8 +1,8 @@
 {
   imports = [
-    ./firefox.nix
     ./git.nix
     ./gnome
+    ./librewolf.nix
     ./packages.nix
   ];
 
