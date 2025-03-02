@@ -12,7 +12,6 @@
     localsend
     obs-studio
     onlyoffice-bin
-    openmw
     openspades
     youtube-music
     via

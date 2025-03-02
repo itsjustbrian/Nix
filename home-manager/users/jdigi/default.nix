@@ -4,6 +4,7 @@
     ./gnome
     ./librewolf.nix
     ./packages.nix
+    ./steam.nix
     ./vscode
   ];
 }
