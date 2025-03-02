@@ -10,6 +10,7 @@
       gnome-contacts
       gnome-maps
       gnome-music
+      gnome-system-monitor
       gnome-tour
       totem
       yelp
@@ -18,6 +19,10 @@
     systemPackages = with pkgs; [
       celluloid
       decibels
+      exhibit
+      foliate
+      mission-center
+      papers
       video-trimmer
     ];
   };
