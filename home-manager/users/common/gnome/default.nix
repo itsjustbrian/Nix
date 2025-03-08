@@ -58,5 +58,7 @@
 
     "org/gnome/system/location".enabled = true;
     "org/gtk/settings/file-chooser".clock-format = "12h";
+    "org/gtk/gtk4/settings/file-chooser".show-hidden = false;
+    "org/gtk/settings/file-chooser".show-hidden = false;
   };
 }
