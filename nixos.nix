@@ -39,6 +39,8 @@ let
               };
             };
 
+            nixpkgs = import ./custom-pkgs.nix { inherit inputs system; };
+
             sops.age.keyFile = "/nix/sops-nix.key";
             sops.defaultSopsFile = ./secrets/secrets.yaml;
             sops.defaultSopsFormat = "yaml";
@@ -50,7 +52,6 @@ let
 
         specialArgs = {
           inherit custom-modules inputs;
-          pkgs = import ./custom-pkgs.nix { inherit inputs nixpkgs system; };
         };
       } // extraConfig
   );

@@ -1,4 +1,4 @@
-{ inputs, nixpkgs, system, ... }:
+{ inputs, system, ... }:
 
 let
 
@@ -23,7 +23,7 @@ let
     '';
   });
 in
-import nixpkgs {
+{
   inherit system;
   config.allowUnfree = true;
 
