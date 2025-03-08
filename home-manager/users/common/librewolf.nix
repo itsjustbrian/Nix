@@ -8,15 +8,6 @@ in
     enable = true;
 
     policies = {
-      DisableTelemetry = true;
-
-      EnableTrackingProtection = {
-        Cryptomining = true;
-        Fingerprinting = true;
-        Locked = true;
-        Value = true;
-      };
-
       ExtensionSettings."uBlock0@raymondhill.net" = {
         default_area = "menupanel";
         install_url = generateLatestSourceURL "ublock-origin";
