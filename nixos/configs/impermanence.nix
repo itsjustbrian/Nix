@@ -1,5 +1,8 @@
 { config, lib, pkgs, ... }:
 
+let
+  tmpPath = "/nix/tmp";
+in
 {
   environment.persistence."/persist" = {
     hideMounts = true;
@@ -29,43 +32,47 @@
     "/persist".neededForBoot = true;
   };
 
-  systemd.services = lib.mkIf (config.time.timeZone == null) {
-    # This is required since symlinks cannot be persisted and declaring the timezone makes it immutable
-    # See https://github.com/nix-community/impermanence/issues/153
+  systemd = {
+    services = {
+      nix-daemon.environment.TMPDIR = tmpPath; # Move tmp to nix store to avoid filling the tmpfs
 
-    timezone-persistence = {
-      after = [ "local-fs.target" ];
-      description = "Persist /etc/localtime between reboots";
+      timezone-persistence = lib.mkIf (config.time.timeZone == null) {
+        # This is required since symlinks cannot be persisted and declaring the timezone makes it immutable
+        # See https://github.com/nix-community/impermanence/issues/153
+        after = [ "local-fs.target" ];
+        description = "Persist /etc/localtime between reboots";
 
-      serviceConfig = {
-        ExecStart = pkgs.writeShellScript "restore-timezone" ''
-          if ! ${pkgs.coreutils}/bin/test -L /persist/etc/localtime; then
-            ${pkgs.coreutils}/bin/echo "Nothing to restore"
-            exit 0
-          fi
-          ${pkgs.coreutils}/bin/ln -sf $(${pkgs.coreutils}/bin/readlink /persist/etc/localtime) /etc/localtime
-        '';
+        serviceConfig = {
+          ExecStart = pkgs.writeShellScript "restore-timezone" ''
+            if ! ${pkgs.coreutils}/bin/test -L /persist/etc/localtime; then
+              ${pkgs.coreutils}/bin/echo "Nothing to restore"
+              exit 0
+            fi
+            ${pkgs.coreutils}/bin/ln -sf $(${pkgs.coreutils}/bin/readlink /persist/etc/localtime) /etc/localtime
+          '';
 
-        ExecStop = pkgs.writeShellScript "persist-timezone" ''
-          ${pkgs.coreutils}/bin/rm -f /persist/etc/localtime
-          if ! ${pkgs.coreutils}/bin/test -L /etc/localtime; then
-            ${pkgs.coreutils}/bin/echo "Nothing to persist"
-            exit 0
-          fi
-          ${pkgs.coreutils}/bin/mkdir -p /persist/etc
-          ${pkgs.coreutils}/bin/cp -P /etc/localtime /persist/etc/localtime
-        '';
+          ExecStop = pkgs.writeShellScript "persist-timezone" ''
+            ${pkgs.coreutils}/bin/rm -f /persist/etc/localtime
+            if ! ${pkgs.coreutils}/bin/test -L /etc/localtime; then
+              ${pkgs.coreutils}/bin/echo "Nothing to persist"
+              exit 0
+            fi
+            ${pkgs.coreutils}/bin/mkdir -p /persist/etc
+            ${pkgs.coreutils}/bin/cp -P /etc/localtime /persist/etc/localtime
+          '';
 
-        RemainAfterExit = true;
-        Type = "oneshot";
+          RemainAfterExit = true;
+          Type = "oneshot";
+        };
+
+        unitConfig = {
+          RequiresMountsFor = "/persist";
+        };
+
+        wantedBy = [ "local-fs.target" ];
       };
-
-      unitConfig = {
-        RequiresMountsFor = "/persist";
-      };
-
-      wantedBy = [ "local-fs.target" ];
     };
-  };
 
+    tmpfiles.rules = [ "D! ${tmpPath} 1777 root root" ]; # Make sure the new tmp directory is created and cleared on boot
+  };
 }
