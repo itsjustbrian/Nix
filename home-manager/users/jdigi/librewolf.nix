@@ -4,13 +4,13 @@ in
 {
   programs.librewolf.policies.ExtensionSettings = {
     "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-      default_area = "navbar";
+      default_area = "menupanel";
       install_url = latestSourceURL "bitwarden-password-manager";
       installation_mode = "force_installed";
     };
 
     "simple-tab-groups@drive4ik" = {
-      default_area = "navbar";
+      default_area = "menupanel";
       install_url = latestSourceURL "simple-tab-groups";
       installation_mode = "force_installed";
     };
