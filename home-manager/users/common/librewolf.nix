@@ -69,7 +69,6 @@ in
     };
 
     settings = {
-      "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
       "privacy.resistFingerprinting" = false;
     };
   };
