@@ -8,7 +8,6 @@
     ./users.nix
     configs.desktop
     configs.gaming
-    configs.ripping-tools
     configs.secureboot # Must be commented on first install
     hardware.asus-rog-strix-b550-i
   ];

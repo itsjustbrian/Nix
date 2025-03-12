@@ -4,6 +4,7 @@
   imports = with custom-modules.nixos.configs.default; [
     home-manager
     sops.default
+    specialisations
   ];
 
   nix = {
