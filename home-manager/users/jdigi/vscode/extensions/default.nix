@@ -1,7 +1,7 @@
 {
   imports = [
     ./github-copilot.nix
-    ./godot
+    ./godot-tools.nix
     ./nix-ide.nix
     ./rust.nix
   ];
