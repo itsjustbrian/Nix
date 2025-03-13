@@ -39,15 +39,16 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1741705273,
-        "narHash": "sha256-bAJTnzcBL8fZhnT6zvWXji4YXbD2UK1K+sAobVx40t4=",
+        "lastModified": 1741792214,
+        "narHash": "sha256-1+NdJ67l7M/LG91Tn7ebInBS/HwOpjty+LQJK99PoH0=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "6bd0ee3e009b4d1d0d7c96fa0f085d8b96511ee5",
+        "rev": "ca1ebf55d1811ddfdd0eb24bdaa656d3c69b5839",
         "type": "github"
       },
       "original": {
         "owner": "rafaelmardojai",
+        "ref": "v136",
         "repo": "firefox-gnome-theme",
         "type": "github"
       }
@@ -261,11 +262,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741704640,
-        "narHash": "sha256-FSvtxhfB0PQtFOj8PMfcgUG1QVaQzjTZvAxLiqDysKI=",
+        "lastModified": 1741772639,
+        "narHash": "sha256-u6jSqRGsfm4Af+tUKJsJ346XwJuomL6Qxiu/BZieowU=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "27f37976beb94100b18ab8407ff056654db68506",
+        "rev": "2f079586510bc77bac539cf330edaebb9d51e0e0",
         "type": "github"
       },
       "original": {
@@ -331,11 +332,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1741703483,
-        "narHash": "sha256-YdbzCx1jVd55luFWYGJZR0K0WzUMwWgKyp8WK+F3IvE=",
+        "lastModified": 1741824373,
+        "narHash": "sha256-S0cDFDsefOIOh432XmOBuTue4dS5Gj5XYlKbeznRxQA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "2154142facaa23e5e4e5bfc865eef42c66886eec",
+        "rev": "66c039b079bb6f30a4df398fc3b89059f45a86a4",
         "type": "github"
       },
       "original": {

@@ -11,7 +11,7 @@
 
     firefox-gnome-theme = {
       flake = false;
-      url = "github:rafaelmardojai/firefox-gnome-theme";
+      url = "github:rafaelmardojai/firefox-gnome-theme/v136";
     };
 
     haumea = {
