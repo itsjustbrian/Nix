@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./godot-tools.nix
+  ];
+}
